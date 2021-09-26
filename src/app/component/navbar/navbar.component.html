@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    <span><a routerLink="/">My Login</a></span>
+    <span class="example-spacer"></span>
+    <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
+    <a *ngIf="loggedIn" mat-icon-button>User</a>
+    <a *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button>Logout</a>
+</mat-toolbar>
+<router-outlet></router-outlet>
